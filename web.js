@@ -12,9 +12,12 @@ fs.readFile('index.html', 'utf8', function (err,data) {
 });
 
 
+var buffer = fs.readFileSync("index.html");
+buffer.toString();
+
 
 app.get('/', function(request, response) {
-  response.send('Hello World 2 changed! c requie');
+  response.send('Hello World 2 changed! c requie buffer');
 });
 
 var port = process.env.PORT || 5000;
