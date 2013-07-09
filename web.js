@@ -13,11 +13,12 @@ fs.readFile('index.html', 'utf8', function (err,data) {
 
 
 var buffer = fs.readFileSync("index.html");
-buffer.toString();
+buffer.toString('utf-8');
+console.log("lalal");
 
 
 app.get('/', function(request, response) {
-  response.send('Hello World 2 changed! c requie buffer');
+  response.send(buffer.toString());
 });
 
 var port = process.env.PORT || 5000;
