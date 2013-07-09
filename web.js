@@ -1,20 +1,20 @@
-var express = require('express');
+OP1var express = require('express');
 
 var app = express.createServer(express.logger());
 
 fs = require('fs');
 
-fs.readFile('index.html', 'utf8', function (err,data) {
-  if (err) {
-    return console.log(err);
-  }
-  console.log(data);
-});
+//fs.readFile('index.html', 'utf8', function (err,data) {
+//  if (err) {
+//    return console.log(err);
+//  }
+//  console.log(data);
+//});
 
 
 var buffer = fs.readFileSync("index.html");
-buffer.toString('utf-8');
-console.log("lalal");
+//buffer.toString('utf-8');
+//console.log("lalal");
 
 
 app.get('/', function(request, response) {
